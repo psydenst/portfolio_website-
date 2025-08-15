@@ -2,9 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from 'next/image';
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { ProjectCarousel } from "./ProjectCarousel";
+
 
 export const Home = (): JSX.Element => {
   const images = [
@@ -49,7 +51,7 @@ export const Home = (): JSX.Element => {
           <div className="w-full px-6 grid lg:grid-cols-2 gap-8 items-center">
             {/* Left side - Images */}
             <div className="flex justify-center items-center h-full">
-              <div className="relative w-[500px] h-[660px]">
+              <div className="relative w-[500px] h-[500px]">
                 <div className="relative w-[470px] h-[460px] top-0 left-[30px]">
                 {images.map((image, index) => (
                   <img
@@ -69,7 +71,6 @@ export const Home = (): JSX.Element => {
                 Hey, I'm Pedro!<br />
                 <span className="text-blue-400">A fullstack web developer</span>
               </h1>
-              
               <p className="text-xl text-gray-300 leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
               </p>
@@ -93,7 +94,7 @@ export const Home = (): JSX.Element => {
                 <Link href="/portfolio" className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-300">
                   View My Work
                 </Link>
-                <Link href="/contact" className="px-8 py-4 border border-white/30 hover:border-white/50 text-white rounded-lg font-semibold transition-colors duration-300">
+                <Link href="https://www.linkedin.com/in/pedrosydenstricker/" target="_blank" className="px-8 py-4 border border-white/30 hover:border-white/50 text-white rounded-lg font-semibold transition-colors duration-300">
                   Contact Me
                 </Link>
               </div>
