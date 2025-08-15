@@ -43,16 +43,16 @@ export const Home = (): JSX.Element => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#13161a]">
+    <div className="overflow-x-hidden sm:overflow-x-visible min-h-screen bg-[#13161a]">
       <Header />
-      <main className="pt-20">
+      <main className="w-screen sm:w-full pt-20">
         {/* Hero Section */}
         <section className="min-h-screen flex items-center">
           <div className="w-full px-6 grid lg:grid-cols-2 gap-8 items-center">
             {/* Left side - Images */}
             <div className="flex justify-center items-center h-full">
               <div className="relative w-[500px] h-[500px]">
-                <div className="relative w-[470px] h-[460px] top-0 left-[30px]">
+                <div className="relative w-[470px] h-[460px] top-0">
                 {images.map((image, index) => (
                   <img
                     key={index}
