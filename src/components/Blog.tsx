@@ -12,7 +12,7 @@ interface BlogPost {
   image: string;
   date: string;
   readTime: string;
-  category: string;
+  category: Array<string> | string;
 	link: string;
 }
 
@@ -24,7 +24,7 @@ const blogPosts: BlogPost[] = [
     image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2FNym_against_surveillance_Swiss_f089b4bd33.webp&w=3840&q=75",
     date: "2025-06-12",
     readTime: "8 min read",
-    category: "Software Architecture",
+    category: ["Cybersecurity"],
 		link: "https://nym.com/blog/the-surveilled-internet"
   },
   {
@@ -177,9 +177,11 @@ export const Blog = (): JSX.Element => {
                       <Clock size={14} />
                       {post.readTime}
                     </div>
-                    <button className="flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm font-semibold transition-colors duration-300">
-                      Read More <ArrowRight size={14} />
-                    </button>
+										<a href={post.link} target="_blank">
+											<button className="flex items-center gap-1 text-blue-400 hover:text-blue-300 text-sm font-semibold transition-colors duration-300">
+												Read More <ArrowRight size={14} />
+											</button>
+										</a>
                   </div>
                 </div>
               </article>
