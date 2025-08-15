@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
 
@@ -16,40 +16,31 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "Private ChatBot",
+    description: "A full-stack private chatbot solution built with Next.js, Django.py, PostgreSQL and Docker. Features include user authentication, async streaming, and multiple LLMs interaction.",
+    image: "/nymjai.png",
+    technologies: ["React", "Django.py", "PostgreSQL", "Docker", "Next.js"],
+    liveUrl: "https://ai.tupinymquim.com",
+    githubUrl: "https://github.com/psydenst/Nymja_AI_MVP_v1"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "Firebase", "Material-UI", "Socket.io"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "Noise Visualization",
+    description: "A network traffic visualisation tool, used in the launch of NymVPN, demonstrating how NymVPN's Anonymous Mode anonymises its customers.",
+    image: "/noise.png",
+    technologies: ["Python", "Tshark", "Grafana"],
+    liveUrl: "https://www.youtube.com/live/AD5ZrU7AZ4A?si=zLjFiN51bBXt6vsS&t=2012",
+    githubUrl: "https://github.com/TupiNymQuim/noise-visualization"
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "A responsive weather application that provides detailed forecasts, interactive maps, and location-based weather alerts.",
-    image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Vue.js", "OpenWeather API", "Chart.js", "Tailwind CSS"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "Interactive USA Law Map",
+    description: " Developed an interactive map of the United States that dynamically visualizes state-by-state internet laws and regulations, offering users an engaging, intuitive platform to explore complex legal landscapes. Featured in a Nym Technologies blog post",
+    image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2Fstg%2Fimage6_e1ab4bd695.png&w=3840&q=75",
+    technologies: ["CSS", "JS"],
+    liveUrl: "https://nym.com/blog/freedom-of-information-and-misinformation",
+    githubUrl: "https://github.com/psydenst/USA_interactive_map"
   },
-  {
-    id: 4,
-    title: "Social Media Analytics",
-    description: "A comprehensive analytics dashboard for social media management with data visualization and automated reporting features.",
-    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Angular", "D3.js", "Express.js", "MongoDB"],
-    liveUrl: "#",
-    githubUrl: "#"
-  }
 ];
 
 export const ProjectCarousel = (): JSX.Element => {

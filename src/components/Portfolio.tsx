@@ -29,13 +29,11 @@ export const Portfolio = (): JSX.Element => {
               <h2 className="text-3xl font-bold text-white mb-4">Technical Skills</h2>
               <p className="text-gray-300">Technologies I work with</p>
             </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { category: "Frontend", skills: ["React", "Vue.js", "TypeScript", "Tailwind CSS"] },
-                { category: "Backend", skills: ["Node.js", "Express.js", "Python", "PostgreSQL"] },
-                { category: "Tools", skills: ["Git", "Docker", "AWS", "Figma"] },
-                { category: "Mobile", skills: ["React Native", "Flutter", "iOS", "Android"] }
+                { category: "Frontend", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
+                { category: "Backend", skills: ["Node.js", "Fastify.js", "Python", "PostgreSQL"] },
+                { category: "Tools", skills: ["Git", "Docker", "Figma"] },
               ].map((skillGroup, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                   <h3 className="text-xl font-semibold text-white mb-4">{skillGroup.category}</h3>
