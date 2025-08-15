@@ -13,62 +13,70 @@ interface BlogPost {
   date: string;
   readTime: string;
   category: string;
+	link: string;
 }
 
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "Building Scalable React Applications with TypeScript",
-    excerpt: "Learn how to structure large React applications using TypeScript for better maintainability and developer experience.",
-    image: "https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=800",
-    date: "2025-01-15",
+    title: "Why did we inherit a surveilled internet?",
+    excerpt: "The beginnings of the Internet, the Cold War, and its military-commercial roots",
+    image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2FNym_against_surveillance_Swiss_f089b4bd33.webp&w=3840&q=75",
+    date: "2025-06-12",
     readTime: "8 min read",
-    category: "React"
+    category: "Software Architecture",
+		link: "https://nym.com/blog/the-surveilled-internet"
   },
   {
     id: 2,
-    title: "Modern CSS Techniques for Better Web Design",
-    excerpt: "Explore the latest CSS features including Grid, Flexbox, and custom properties to create stunning web layouts.",
-    image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
-    date: "2025-01-10",
+    title: "What is China’s Great Firewall?",
+    excerpt: "How the world's largest censorship apparatus works — and how to circumvent it",
+    image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2FNym_VPN_against_Censorship_e2a8f256f1.webp&w=3840&q=75",
+    date: "2025-08-08",
     readTime: "6 min read",
-    category: "CSS"
+    category: "Cybersecurity",
+		link: "https://nym.com/blog/what-is-great-firewall-of-china"
   },
   {
     id: 3,
-    title: "Node.js Performance Optimization Tips",
-    excerpt: "Discover proven strategies to optimize your Node.js applications for better performance and scalability.",
-    image: "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800",
-    date: "2025-01-05",
+    title: "What is decentralization?",
+    excerpt: "Understanding principles and technologies for freedom, power regulation, and autonomy today",
+    image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2FNetwork_1_d56dcb6eb6.svg&w=3840&q=75",
+    date: "2025-06-27",
     readTime: "10 min read",
-    category: "Node.js"
+    category: "Web3",
+		link: "https://nym.com/blog/what-is-decentralization"
   },
-  {
-    id: 4,
-    title: "Database Design Best Practices",
-    excerpt: "Learn essential database design principles that will help you build efficient and maintainable data structures.",
-    image: "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=800",
-    date: "2025-01-01",
-    readTime: "12 min read",
-    category: "Database"
-  },
+	{
+	id: 4,
+	title: "What is Monero?",
+	excerpt: "Private, secure, and untraceable: Discover Monero (XMR)",
+	image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2Fmonero_b8867585fa.png&w=3840&q=75",
+	date: "2025-08-08",
+	readTime: "6 min read",
+	category: "Web3",
+	link: "https://nym.com/blog/what-is-monero"
+	},
   {
     id: 5,
-    title: "The Future of Web Development",
-    excerpt: "Exploring emerging trends and technologies that are shaping the future of web development in 2025 and beyond.",
-    image: "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800",
-    date: "2024-12-28",
-    readTime: "7 min read",
-    category: "Trends"
+    title: "What is Litecoin (LTC)?",
+    excerpt: "Alternative to Bitcoin: The history and technology behind crypto's digital “silver”",
+    image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2FLitecoin_with_Nym_VPN_14167b1a2a.png&w=3840&q=75",
+    date: "2025-08-03",
+    readTime: "2 min read",
+    category: "Web3",
+		link: "https://nym.com/blog/what-is-litecoin-ltc"
+
   },
   {
     id: 6,
-    title: "API Security Best Practices",
-    excerpt: "Essential security measures every developer should implement when building and consuming APIs.",
-    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800",
-    date: "2024-12-25",
+    title: "X Ban on Brazil",
+    excerpt: "Reflections on the fight for democracy, online privacy, and freedom.",
+    image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2FCommunity_2_ffcc873c2d.svg&w=3840&q=75",
+    date: "2024-09-10",
     readTime: "9 min read",
-    category: "Security"
+    category: "Society",
+		link: "https://nym.com/blog/nym-squads-speak-out-tupinymquim-on-the-ground-in-brazil"
   }
 ];
 
@@ -83,7 +91,7 @@ export const Blog = (): JSX.Element => {
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">Blog</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Thoughts, tutorials, and insights about web development, technology, and the ever-evolving digital landscape.
+              Thoughts, tutorials, and insights about web development, privacy, technology, and the ever-evolving digital landscape.
             </p>
           </div>
 
@@ -119,9 +127,11 @@ export const Blog = (): JSX.Element => {
                   </div>
                   <h2 className="text-3xl font-bold text-white mb-4">{blogPosts[0].title}</h2>
                   <p className="text-gray-300 mb-6 leading-relaxed">{blogPosts[0].excerpt}</p>
-                  <button className="flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-300">
-                    Read More <ArrowRight size={18} />
-                  </button>
+                  <a href="https://nym.com/blog/the-surveilled-internet" target="_blank">
+										<button className="flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-300">
+											Read More <ArrowRight size={18} />
+										</button>
+									</a>
                 </div>
               </div>
             </div>

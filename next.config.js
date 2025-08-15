@@ -3,24 +3,27 @@ const nextConfig = {
   // Enable experimental features for better performance
   experimental: {
     optimizePackageImports: ['lucide-react'],
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
+
   },
+
+	turbopack: {
+		rules: {
+			'*.svg': {
+				loaders: ['@svgr/webpack'],
+				as: '*.js',
+			},
+		},
+	},
   
   // Image optimization
   images: {
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    formats: ['image/webp'],
+    deviceSizes: [640, 828, 1200, 1920, 3840],
+    imageSizes: [16, 32, 64, 128, 256, 384],
   },
   
   // Webpack optimizations
+/*
   webpack: (config, { dev, isServer }) => {
     // Optimize bundle size
     if (!dev && !isServer) {
@@ -38,17 +41,18 @@ const nextConfig = {
     
     return config
   },
-  
+*/
+
   // Compiler optimizations
-  compiler: {
+ compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   
   // Output optimizations
-  output: 'standalone',
+//  output: 'standalone',
   
   // Enable SWC minification
-  swcMinify: true,
+//  swcMinify: true,
 }
 
 module.exports = nextConfig 
