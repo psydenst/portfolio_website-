@@ -31,27 +31,27 @@ export const Home = (): JSX.Element => {
     {
       className: "w-[322px] h-[322px] top-[130px] left-[150px] fill-white",
       src: "/image-removebg-preview--4--1.png",
-      alt: "Image removebg",
+      alt: "Machine 0",
     },
     {
       className: "w-[169px] h-[139px] top-0 left-[181px]",
       src: "/image-removebg-preview--6--1.png",
-      alt: "Image removebg",
+      alt: "Machine 2",
     },
     {
       className: "w-[216px] h-[188px] top-[121px] left-[413px]",
       src: "/image-removebg-preview--7--1.png",
-      alt: "Image removebg",
+      alt: "Machine 3",
     },
     {
       className: "w-[173px] h-[169px] top-[444px] left-[401px]",
       src: "/image-removebg-preview--8--1.png",
-      alt: "Image removebg",
+      alt: "Machine 4",
     },
     {
       className: "w-[154px] h-[179px] top-[416px] left-0",
       src: "/image-removebg-preview--9--1.png",
-      alt: "Image removebg",
+      alt: "Machine 5",
     },
 		{
 			className: "w-[118px] h-[113px] top-[119px] left-0",
@@ -60,7 +60,7 @@ export const Home = (): JSX.Element => {
 		},
   ];
 
-	const machine1 = images.find(img => img.alt === "Machine 1");
+	const machine3 = images.find(img => img.alt === "Machine 4");
 
 
   return (
@@ -74,11 +74,11 @@ export const Home = (): JSX.Element => {
             <div className="flex justify-center items-center h-full">
               <div className="relative max-w-full  lg:w-[500px] h-[500px]">
                 <div className="relative max-w-full lg:w-[470px] h-[460px] flex items-center justify-center top-0">
-								{isSmall && machine1 ? (
+								{isSmall && machine3 ? (
 									<img
 										className="h-100 mx-auto object-cover items-center" // centraliza no mobile
-										alt={machine1.alt}
-										src={machine1.src}
+										alt={machine3.alt}
+										src={machine3.src}
 									/>
                   ) : (
 									images.map((image, index) => (
