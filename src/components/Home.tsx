@@ -72,7 +72,7 @@ export const Home = (): JSX.Element => {
                 <span className="text-blue-400">A fullstack web developer</span>
               </h1>
               <p className="text-xl text-gray-300 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+							Graduated from École 42—ranked among the top 6 most universities by WURI—I bring extensive experience in web and Web3 development, creating innovative, scalable, and high-performance solutions for diverse industries.
               </p>
               
               {/* Technology Icons */}

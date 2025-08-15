@@ -18,7 +18,7 @@ export const Header = (): JSX.Element => {
                 pathname === "/" ? "text-blue-400" : "text-white hover:text-blue-400"
               }`}
             >
-              ABOUT
+              HOME
             </Link>
           </li>
           <li>
