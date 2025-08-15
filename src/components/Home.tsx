@@ -6,9 +6,27 @@ import Image from 'next/image';
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { ProjectCarousel } from "./ProjectCarousel";
+import { useState, useEffect } from "react";
 
+function useIsSmallScreen() {
+  const [isSmall, setIsSmall] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsSmall(window.innerWidth < 1023); // Tailwind sm breakpoint = 640px
+    };
+
+    checkScreen(); // checa na montagem
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  return isSmall;
+}
 
 export const Home = (): JSX.Element => {
+	const isSmall =	useIsSmallScreen()
   const images = [
     {
       className: "w-[322px] h-[322px] top-[130px] left-[150px] fill-white",
@@ -42,6 +60,9 @@ export const Home = (): JSX.Element => {
 		},
   ];
 
+	const machine1 = images.find(img => img.alt === "Machine 1");
+
+
   return (
     <div className="overflow-x-hidden sm:overflow-x-visible min-h-screen bg-[#13161a]">
       <Header />
@@ -51,16 +72,24 @@ export const Home = (): JSX.Element => {
           <div className="w-full px-6 grid lg:grid-cols-2 gap-8 items-center">
             {/* Left side - Images */}
             <div className="flex justify-center items-center h-full">
-              <div className="relative w-[500px] h-[500px]">
-                <div className="relative w-[470px] h-[460px] top-0">
-                {images.map((image, index) => (
-                  <img
-                    key={index}
-                    className={`absolute object-cover ${getScaledImageClass(image.className)}`}
-                    alt={image.alt}
-                    src={image.src}
-                  />
-                ))}
+              <div className="relative max-w-full  lg:w-[500px] h-[500px]">
+                <div className="relative max-w-full lg:w-[470px] h-[460px] flex items-center justify-center top-0">
+								{isSmall && machine1 ? (
+									<img
+										className="h-100 mx-auto object-cover items-center" // centraliza no mobile
+										alt={machine1.alt}
+										src={machine1.src}
+									/>
+                  ) : (
+									images.map((image, index) => (
+										<img
+											key={index}
+											className={`absolute object-cover ${getScaledImageClass(image.className)}`}
+											alt={image.alt}
+											src={image.src}
+										/>
+                ))
+								)}
                 </div>
               </div>
             </div>
