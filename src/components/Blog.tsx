@@ -27,6 +27,16 @@ const blogPosts: BlogPost[] = [
     category: ["Cybersecurity"],
 		link: "https://nym.com/blog/the-surveilled-internet"
   },
+	{
+		id: 7,
+		title: "What is a Denial-of-Service (DoS) attack?",
+		excerpt: "Understanding the history, evolution, and severity of denial-of-service attack",
+		image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2FVPN_2_85b5a04c09.svg&w=3840&q=75",
+		date: "2025-09-01",
+		readTime: "10 min read",
+		category: ["Cybersecurity"],
+		link: "https://nym.com/blog/denial-of-service-attacks"
+  },
   {
     id: 2,
     title: "What is China’s Great Firewall?",
