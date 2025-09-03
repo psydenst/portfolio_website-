@@ -36,7 +36,7 @@ const projects: Project[] = [
     id: 3,
     title: "Interactive USA Law Map",
     description: " Developed an interactive map of the United States that dynamically visualizes state-by-state internet laws and regulations, offering users an engaging, intuitive platform to explore complex legal landscapes. Featured in a Nym Technologies blog post",
-    image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2Fstg%2Fimage6_e1ab4bd695.png&w=3840&q=75",
+    image: "/MDM_Reg.jpeg",
     technologies: ["CSS", "JS"],
     liveUrl: "https://nym.com/blog/freedom-of-information-and-misinformation",
     githubUrl: "https://github.com/psydenst/USA_interactive_map"
