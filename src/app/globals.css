@@ -118,3 +118,7 @@
   scrollbar-width: thin;          /* "auto" or "thin" */
   scrollbar-color: #333 #13161a;  /* thumb color, track color */
 }
+
+strong, b {
+	color: white;
+}

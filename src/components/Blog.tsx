@@ -27,6 +27,16 @@ const blogPosts: BlogPost[] = [
     category: ["Cybersecurity"],
 		link: "https://nym.com/blog/the-surveilled-internet"
   },
+{
+    id: 8,
+    title: "What is packet sniffing?",
+    excerpt: "Tcpdump, Wireshark, and how your neighbor spies on you",
+    image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2FNym_VPN_against_surveillance_2_98b83068b6.webp&w=3840&q=75",
+    date: "2025-09-24",
+    readTime: "9 min read",
+    category: "Cybersecurity",
+		link: "https://nym.com/blog/what-is-packet-sniffing"
+  },
 	{
 		id: 7,
 		title: "What is a Denial-of-Service (DoS) attack?",
@@ -37,16 +47,7 @@ const blogPosts: BlogPost[] = [
 		category: ["Cybersecurity"],
 		link: "https://nym.com/blog/denial-of-service-attacks"
   },
-  {
-    id: 7,
-    title: "What is packet sniffing?",
-    excerpt: "Tcpdump, Wireshark, and how your neighbor spies on you",
-    image: "https://nym.com/_next/image?url=https%3A%2F%2Fassets.nym.com%2FNym_VPN_against_surveillance_2_98b83068b6.webp&w=3840&q=75",
-    date: "2025-09-24",
-    readTime: "9 min read",
-    category: "Cybersecurity",
-		link: "https://nym.com/blog/what-is-packet-sniffing"
-  },
+
   {
     id: 2,
     title: "What is China’s Great Firewall?",

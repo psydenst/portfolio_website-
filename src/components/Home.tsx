@@ -100,9 +100,11 @@ export const Home = (): JSX.Element => {
                 Hey, I'm Pedro!<br />
                 <span className="text-blue-400">A fullstack web developer</span>
               </h1>
-              <p className="text-xl text-gray-300 leading-relaxed">
-							Graduated from École 42—ranked among the top 6 most universities by WURI—I bring extensive experience in web and Web3 development, creating innovative, scalable, and high-performance solutions for diverse industries.
-              </p>
+              <p className="text-xl text-gray-300 leading-relaxed text-justify">
+								Graduated from <b>École 42</b>—ranked among the <b>top 3 most innovative universities</b> in the world by WURI—
+								I bring extensive experience in <b>web</b> and <b>Web3</b> development, creating innovative, scalable, and high-performance solutions for diverse industries. 
+								Being passionate about <b>privacy</b> and <b>security-first</b> applications, I also <b>write</b> regularly about <b>software development</b> and <b>cybersecurity</b>, for both corporative and personal projects.
+							</p>
               
               {/* Technology Icons */}
               <div className="space-y-4">
